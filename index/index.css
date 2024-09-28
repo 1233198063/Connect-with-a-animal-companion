@@ -142,14 +142,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 260.41666667px;
-  height: 260.41666667px;
+  width: 416.66666667px;
+  height: 416.66666667px;
   margin-top: -36px;
   justify-self: center;
   align-self: center;
   grid-area: 1 / 2 / 2 / 3;
-  background-color: antiquewhite;
-  border-radius: 50%;
+  background-image: url(../images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   color: #081c3a;
 }
 /* home-hero-subtitle */

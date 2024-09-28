@@ -182,8 +182,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: (5000px / @vw);
-      height: (5000px / @vw);
+      width: (8000px / @vw);
+      height: (8000px / @vw);
       margin-top: -36px;
 
       justify-self: center;
@@ -191,8 +191,11 @@
 
       grid-area: 1 / 2 / 2 / 3;
 
-      background-color: antiquewhite;
-      border-radius: 50%;
+      background-image: url(../images/logo.png);
+      background-size:contain;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
       color: #081c3a;
     }
   }
@@ -275,17 +278,16 @@
       margin: (800px / @vw) 0px;
     }
 
-    .prototypes-text{
-        display: flex;
-        gap: @padding-large;
+    .prototypes-text {
+      display: flex;
+      gap: @padding-large;
 
-        margin: 0px (1800px / @vw);
+      margin: 0px (1800px / @vw);
 
-        p {
-            margin: @padding-large 0px;
-        }
+      p {
+        margin: @padding-large 0px;
+      }
     }
-    
   }
 
   .prototypes-imgs {
@@ -294,10 +296,10 @@
     margin-top: 3 * @padding-large;
 
     .img {
-        background-color: rgba(15, 19, 38, 0.3);
-        height: (8000px / @vw);
-        width: (6000px / @vw);
-        border-radius: @padding-mini;
+      background-color: rgba(15, 19, 38, 0.3);
+      height: (8000px / @vw);
+      width: (6000px / @vw);
+      border-radius: @padding-mini;
     }
   }
 
@@ -529,7 +531,7 @@
 
 // testimonial section
 .testimonial-section {
-//   background-image: url(../images/beach_cabin.jpeg);
+  //   background-image: url(../images/beach_cabin.jpeg);
 
   background-size: cover;
   overflow: hidden;
@@ -1197,7 +1199,7 @@
 
   position: relative;
 
-  h2{
+  h2 {
     margin-bottom: (1500px / @vw);
   }
 
@@ -1209,10 +1211,10 @@
     align-items: center;
 
     .test-imgs {
-        grid-area: 1 / 1 / 2 / 2;
-        background-color: rgba(15, 19, 38, 0.55);
-        color: #fff;
-        height: (8000px / @vw);
+      grid-area: 1 / 1 / 2 / 2;
+      background-color: rgba(15, 19, 38, 0.55);
+      color: #fff;
+      height: (8000px / @vw);
     }
 
     .test-paragraphs {
@@ -1228,9 +1230,9 @@
     }
 
     .result-imgs {
-        background-color: rgba(15, 19, 38, 0.55);
-        height: (8000px / @vw);
-        color: #fff;
+      background-color: rgba(15, 19, 38, 0.55);
+      height: (8000px / @vw);
+      color: #fff;
     }
   }
 
