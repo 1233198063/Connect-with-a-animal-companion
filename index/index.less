@@ -8,6 +8,9 @@
 @padding-small: (200px / @vw);
 @padding-mini: (100px / @vw);
 
+@margin-big: (1500px / @vw);
+@margin-large: (3600px / @vw);
+
 @shadow: rgba(192, 192, 211, 0.1);
 
 .preloader {
@@ -118,13 +121,13 @@
   .home-hero-content {
     position: relative;
     display: grid;
-    padding-top: 92px;
-    padding-bottom: 152px;
-    padding-left: 80px;
+    padding-top: 1.2 * @margin-big;
+    padding-bottom: 1.5 * @margin-big;
+    padding-left: @margin-big;
 
-    align-content: space-between;
-    grid-auto-columns: 1fr;
-    grid-column-gap: 0px;
+    // align-content: space-between;
+    grid-auto-columns: 1fr 1fr;
+    grid-column-gap: @padding-large;
     grid-row-gap: 0px;
 
     grid-template-columns: 1fr 360px;
@@ -147,6 +150,7 @@
       z-index: 20;
       display: grid;
       max-width: 550px;
+
       grid-auto-columns: 1fr;
       grid-column-gap: 16px;
       grid-row-gap: 48px;
@@ -180,8 +184,7 @@
       position: relative;
       z-index: 25;
       display: flex;
-      justify-content: center;
-      align-items: center;
+
       width: (8000px / @vw);
       height: (8000px / @vw);
       margin-top: -36px;
@@ -189,7 +192,7 @@
       justify-self: center;
       align-self: center;
 
-      grid-area: 1 / 2 / 2 / 3;
+      grid-area: 1 / 1 / 2 / 2;
 
       background-image: url(../images/logo.png);
       background-size:contain;
@@ -476,40 +479,16 @@
     .benefits-box {
       margin: (500px / @vw) 0px;
       display: grid;
-      grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto; 
+      grid-gap: @padding-large;
       border: @border-width solid @benefits-lines-color;
       border-radius: (180px / @vw);
       background-color: #fff;
 
       .benefits-card {
         padding: @padding-large;
-        display: grid;
-        grid-template-rows: 1fr 1fr auto;
-        gap: @padding-big;
-        align-items: end;
         transition: all 0.5s;
-
-        .benefits-icon {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          width: (1000px / @vw);
-          height: (1000px / @vw);
-          padding: @padding-small;
-          background-color: #f7f8fc;
-          border: @border-width solid @benefits-lines-color;
-          border-radius: 100%;
-
-          span {
-            display: block;
-          }
-        }
-
-        p {
-          font-size: (300px / @vw);
-          line-height: 1.4em;
-        }
       }
 
       .benefits-card:hover {
@@ -529,9 +508,17 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .benefits-box {
+      grid-template-columns: 1fr; /* small screen become 1 column */
+  }
+}
+
 // testimonial section
 .testimonial-section {
-  //   background-image: url(../images/beach_cabin.jpeg);
+  // https://unsplash.com/photos/short-fur-white-cat-KbiV1er60Wk?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
+  // https://unsplash.com/photos/paw-of-white-and-black-cat-cE3CG_HzsHM?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash
+    background-image: url(../images/francesco-ungaro-cE3CG_HzsHM-unsplash.jpg);
 
   background-size: cover;
   overflow: hidden;
@@ -601,13 +588,17 @@
       text-align: center;
 
       .body-display {
-        font-size: (350px / @vw);
-
-        line-height: 1.6em;
-        font-weight: 400;
+        background-image: url('../images/wireframe1.png');
+        background-position: 50% 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
         transition: all 1s;
 
-        max-width: (10000px / @vw);
+        height: (10000px / @vw);
+        width: (15000px / @vw);
+        
+        position: relative;
+        z-index: 50;
       }
 
       .testimonial-client {
@@ -670,7 +661,7 @@
     top: 0%;
     right: 0%;
     bottom: 0%;
-    background-color: rgba(15, 19, 38, 0.55);
+    background-color: rgba(15, 19, 38, 0.2);
   }
 }
 

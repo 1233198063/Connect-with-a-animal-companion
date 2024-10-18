@@ -143,23 +143,23 @@ document.addEventListener("DOMContentLoaded", function () {
     //testimonial slide
     const testArr = [
         {
-            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            img: '../images/wireframe1.png',
             client: 'WireFrame1'
         },
         {
-            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            img: '../images/wireframe2.png',
             client: 'WireFrame2'
         },
         {
-            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            img: '../images/wireframe3.png',
             client: 'WireFrame3'
         },
         {
-            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            img: '../images/wireframe4.png',
             client: 'WireFrame4'
         },
         {
-            text: 'Donec sed auctor orci. In a nisl vel nisi egestas efficitur nec ac neque. Sedvitae sollicitudin elit, ac tristique nisi. Pellentesque rutrum egestas massalacinia volutpat. Integer et facilisis elit, vitae lobortis enim.',
+            img: '../images/wireframe5.png',
             client: 'WireFrame5'
         }
     ];
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //test for testimonial
     const testNext = document.querySelector('.slide-button-next');
     const testPrev = document.querySelector('.slide-button-prev');
-    const testText = document.querySelector('.testimonial-slide .body-display');
+    const testImg = document.querySelector('.testimonial-slide .body-display');
     const testClient = document.querySelector('.testimonial-slide .testimonial-client');
     const scrollbarFill = document.querySelector('.scrollbar-fill');
 
@@ -175,18 +175,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateTest(index) {
 
-        testText.style.opacity = 0;
-        testText.style.transform = 'translateY(20px) scale(0.6)';
+        testImg.style.opacity = 0;
+        testImg.style.transform = 'translateY(20px) scale(0.6)';
 
         testClient.style.opacity = 0;
         testClient.style.transform = 'translateY(20px) scale(0.8)';
 
         // Wait for the fade out and transform transition
         setTimeout(() => {
-            testText.textContent = testArr[index].text;
+            testImg.style.backgroundImage =  `url('${testArr[index].img}')`;
             testClient.textContent = testArr[index].client;
-            testText.style.opacity = 1;
-            testText.style.transform = 'translateY(0px) scale(1)';
+            testImg.style.opacity = 1;
+            testImg.style.transform = 'translateY(0px) scale(1)';
 
             testClient.style.opacity = 1;
             testClient.style.transform = 'translateY(0px) scale(1)';

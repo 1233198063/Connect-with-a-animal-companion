@@ -87,12 +87,11 @@
 .home-hero-container .home-hero-content {
   position: relative;
   display: grid;
-  padding-top: 92px;
-  padding-bottom: 152px;
-  padding-left: 80px;
-  align-content: space-between;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 0px;
+  padding-top: 93.75px;
+  padding-bottom: 117.1875px;
+  padding-left: 78.125px;
+  grid-auto-columns: 1fr 1fr;
+  grid-column-gap: 26.04166667px;
   grid-row-gap: 0px;
   grid-template-columns: 1fr 360px;
   grid-template-rows: 1fr auto;
@@ -140,14 +139,12 @@
   position: relative;
   z-index: 25;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 416.66666667px;
   height: 416.66666667px;
   margin-top: -36px;
   justify-self: center;
   align-self: center;
-  grid-area: 1 / 2 / 2 / 3;
+  grid-area: 1 / 1 / 2 / 2;
   background-image: url(../images/logo.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -368,36 +365,16 @@
 .benefits-section .benefits-bottom .benefits-box {
   margin: 26.04166667px 0px;
   display: grid;
-  grid-template-columns: 1fr 1px 1fr 1px 1fr 1px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 26.04166667px;
   border: 1.04166667px solid rgba(192, 192, 211, 0.2);
   border-radius: 9.375px;
   background-color: #fff;
 }
 .benefits-section .benefits-bottom .benefits-box .benefits-card {
   padding: 26.04166667px;
-  display: grid;
-  grid-template-rows: 1fr 1fr auto;
-  gap: 15.625px;
-  align-items: end;
   transition: all 0.5s;
-}
-.benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 52.08333333px;
-  height: 52.08333333px;
-  padding: 10.41666667px;
-  background-color: #f7f8fc;
-  border: 1.04166667px solid rgba(192, 192, 211, 0.2);
-  border-radius: 100%;
-}
-.benefits-section .benefits-bottom .benefits-box .benefits-card .benefits-icon span {
-  display: block;
-}
-.benefits-section .benefits-bottom .benefits-box .benefits-card p {
-  font-size: 15.625px;
-  line-height: 1.4em;
 }
 .benefits-section .benefits-bottom .benefits-box .benefits-card:hover {
   border-radius: 9.375px;
@@ -411,7 +388,14 @@
   height: 100%;
   background-color: rgba(192, 192, 211, 0.2);
 }
+@media screen and (max-width: 768px) {
+  .benefits-box {
+    grid-template-columns: 1fr;
+    /* small screen become 1 column */
+  }
+}
 .testimonial-section {
+  background-image: url(../images/francesco-ungaro-cE3CG_HzsHM-unsplash.jpg);
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -466,11 +450,15 @@
   text-align: center;
 }
 .testimonial-section .slider-wrapper .testimonial-slide .body-display {
-  font-size: 18.22916667px;
-  line-height: 1.6em;
-  font-weight: 400;
+  background-image: url('../images/wireframe1.png');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
   transition: all 1s;
-  max-width: 520.83333333px;
+  height: 520.83333333px;
+  width: 781.25px;
+  position: relative;
+  z-index: 50;
 }
 .testimonial-section .slider-wrapper .testimonial-slide .testimonial-client {
   font-size: 20.83333333px;
@@ -519,7 +507,7 @@
   top: 0%;
   right: 0%;
   bottom: 0%;
-  background-color: rgba(15, 19, 38, 0.55);
+  background-color: rgba(15, 19, 38, 0.2);
 }
 .vacations-section {
   position: relative;
