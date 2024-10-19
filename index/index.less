@@ -127,10 +127,10 @@
 
     // align-content: space-between;
     grid-auto-columns: 1fr 1fr;
-    grid-column-gap: @padding-large;
+    grid-column-gap: 0px;
     grid-row-gap: 0px;
 
-    grid-template-columns: 1fr 360px;
+    grid-template-columns: 1fr 1fr;
 
     grid-template-rows: 1fr auto;
     color: #fff;
@@ -175,6 +175,10 @@
         h1 {
           font-size: 68px;
           line-height: 5rem;
+        }
+
+        p {
+          color: #fff;
         }
       }
     }
@@ -426,9 +430,6 @@
 
   .intro-wrapper {
     padding: (2800px / @vw) (1500px / @vw);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: (500px / @vw);
 
     .intro-content {
       display: flex;
@@ -456,18 +457,17 @@
     .intro-right-img {
       position: relative;
       overflow: hidden;
-      width: 100%;
-      height: 100%;
+      height: (18000px / @vw);
       border-radius: 3px;
       display: flex;
       flex-direction: column;
 
-      .img1,
-      .img2 {
-        width: 100%;
-        height: 100%;
-        background-color: rgba(15, 19, 38, 0.55);
-      }
+      padding: 0px @padding-large;
+
+      background-image: url('../images/POV.png');
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 
@@ -524,7 +524,7 @@
   overflow: hidden;
   position: relative;
   padding-top: (3500px / @vw);
-  padding-bottom: (5200px / @vw);
+  padding-bottom: (3200px / @vw);
   width: 100%;
 
   .slider-wrapper {
@@ -922,7 +922,7 @@
 
 //promise section
 .promise-section {
-  height: (12000px / @vw);
+  height: (10000px / @vw);
   margin-left: (1500px / @vw);
 
   overflow: hidden;
@@ -939,19 +939,24 @@
     justify-content: center;
     justify-items: center;
 
-    padding: (3500px / @vw) 0px;
+    padding: (1500px / @vw) 0px;
 
     .text {
       max-width: (15000px / @vw);
       text-align: center;
 
       h1 {
-        color: #fff;
+        color: #000000;
         margin-bottom: @padding-big;
       }
 
-      .subtitle {
-        color: #fff;
+      .user-problem {
+        color: #000000;
+        text-align: left;
+      }
+
+      .problem-one {
+        margin-bottom: @padding-large;
       }
     }
   }
@@ -962,12 +967,12 @@
     top: 0%;
     right: 0%;
     bottom: 0%;
-    background-color: rgba(15, 19, 38, 0.55);
+    // background-color: rgba(15, 19, 38, 0.55);
     z-index: 1;
   }
 
   .background {
-    background-color: gray;
+    background-color: #fff;
     background-size: cover;
     background-position: center;
 
