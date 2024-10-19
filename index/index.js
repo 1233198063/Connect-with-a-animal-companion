@@ -143,23 +143,23 @@ document.addEventListener("DOMContentLoaded", function () {
     //testimonial slide
     const testArr = [
         {
-            img: '../images/wireframe1.png',
+            img: './images/wireframe1.png',
             client: 'WireFrame1'
         },
         {
-            img: '../images/wireframe2.png',
+            img: './images/wireframe2.png',
             client: 'WireFrame2'
         },
         {
-            img: '../images/wireframe3.png',
+            img: './images/wireframe3.png',
             client: 'WireFrame3'
         },
         {
-            img: '../images/wireframe4.png',
+            img: './images/wireframe4.png',
             client: 'WireFrame4'
         },
         {
-            img: '../images/wireframe5.png',
+            img: './images/wireframe5.png',
             client: 'WireFrame5'
         }
     ];
