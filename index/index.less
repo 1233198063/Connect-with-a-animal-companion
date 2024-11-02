@@ -141,7 +141,6 @@ h4 {
 
     /* home hero intro */
     .home-hero-intro {
-      background-color: #4a896cea;
       border-radius: @padding-large;
       padding: @padding-large;
 
@@ -171,16 +170,7 @@ h4 {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
 
-        h1 {
-          text-align: center;
-          font-size: 68px;
-          line-height: 5rem;
-        }
-
-        p {
-          text-align: center;
-          color: #f7f8fc;
-        }
+      
       }
     }
 
@@ -1241,7 +1231,14 @@ h4 {
     }
 
     .result-imgs {
-      margin: @padding-large 0px;
+      margin: @margin-big 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: (25000px / @vw);
+      }
     }
   }
 
@@ -1673,7 +1670,6 @@ h4 {
 
           display: flex;
           flex-direction: column;
-          align-items: center;
           justify-content: center;
         }
       }

@@ -102,7 +102,6 @@ h4 {
   /* web-logo */
 }
 .home-hero-container .home-hero-content .home-hero-intro {
-  background-color: #4a896cea;
   border-radius: 26.04166667px;
   padding: 26.04166667px;
   position: relative;
@@ -128,15 +127,6 @@ h4 {
   grid-row-gap: 24px;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-}
-.home-hero-container .home-hero-content .home-hero-intro .home-hero-title h1 {
-  text-align: center;
-  font-size: 68px;
-  line-height: 5rem;
-}
-.home-hero-container .home-hero-content .home-hero-intro .home-hero-title p {
-  text-align: center;
-  color: #f7f8fc;
 }
 .home-hero-container .home-hero-content .web-logo {
   position: relative;
@@ -945,7 +935,13 @@ h4 {
   display: inline-block;
 }
 .about-section .about-wrapper .result-imgs {
-  margin: 26.04166667px 0px;
+  margin: 78.125px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-section .about-wrapper .result-imgs img {
+  width: 1302.08333333px;
 }
 .about-section .about-img-wrapper {
   display: flex;
@@ -1268,7 +1264,6 @@ h4 {
   color: #081c3a;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .posts-section .journal-right-wrapper .post-list .post-item:hover {
