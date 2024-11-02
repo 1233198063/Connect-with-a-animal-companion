@@ -170,7 +170,10 @@ h4 {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
 
-      
+        img {
+          max-width: (6500px /@vw);
+        }
+        
       }
     }
 
@@ -340,7 +343,7 @@ h4 {
 
   // destinations slide (use swiper)
   .destinations-slide {
-    margin: (6000px / @vw) 0px;
+    margin: (3000px / @vw) 0px;
 
     .swiper {
       overflow: visible;
@@ -393,7 +396,7 @@ h4 {
         img {
           position: relative;
 
-          width: (6500px / @vw);
+          width: (3500px / @vw);
 
           transition: transform 0.3s ease;
         }
@@ -470,7 +473,7 @@ h4 {
     .intro-right-img {
       position: relative;
       overflow: hidden;
-      height: (18000px / @vw);
+      height: (13000px / @vw);
       border-radius: 3px;
       display: flex;
       flex-direction: column;
@@ -491,16 +494,16 @@ h4 {
 
     .benefits-box {
       margin: (500px / @vw) 0px;
+      padding: @padding-large;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
-      grid-gap: @padding-large;
+      // column-gap: @padding-large;
       border: @border-width solid @benefits-lines-color;
       border-radius: (180px / @vw);
       background-color: #fff;
 
       .benefits-card {
-        padding: @padding-large;
         transition: all 0.5s;
       }
 
@@ -1237,7 +1240,7 @@ h4 {
       justify-content: center;
 
       img {
-        width: (25000px / @vw);
+        width: (15000px / @vw);
       }
     }
   }
@@ -1640,10 +1643,9 @@ h4 {
       margin-bottom: @padding-large;
 
       h2 {
-        padding: @padding-large;
+        padding: @padding-big;
         background-color: #d8e1d0;
-        border-radius: @padding-big;
-        border: 1px solid #4a896c;
+        border-radius: @padding-mini;
       }
     }
 

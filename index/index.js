@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const swiper = new Swiper('.destinations-slide .swiper', {
         speed: 900,
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 80,
         allowTouchMove: true,
         centeredSlides: true,
