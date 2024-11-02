@@ -105,8 +105,9 @@ a {
   letter-spacing: 2.08333333px;
   margin-bottom: 5.20833333px;
 }
-p {
-  color: #516381;
+p,
+li {
+  color: #18181a;
   font-size: 18.22916667px;
   line-height: 1.6em;
 }

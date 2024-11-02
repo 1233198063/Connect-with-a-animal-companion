@@ -97,49 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // desinations section swiper
-    const swiper = new Swiper('.destinations-slide .swiper', {
-        speed: 900,
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 80,
-        allowTouchMove: true,
-        centeredSlides: true,
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-    });
-
-    // when mouse move on the swiper images
-    const swiperSlides = document.querySelectorAll('.destinations-slide .swiper-slide');
-
-    swiperSlides.forEach(slide => {
-        const layer = slide.querySelector('.gradient-overlay');
-        const slideImg = slide.querySelector('img');
-
-        layer.addEventListener('mousemove', (e) => {
-            const rect = layer.getBoundingClientRect();
-            const mouseX = e.clientX - rect.left;
-            const mouseY = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const moveX = (centerX - mouseX) / 50;
-            const moveY = (centerY - mouseY) / 50;
-
-            slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
-        });
-
-        layer.addEventListener('mouseout', function () {
-            slideImg.style.transform = 'scale(1)';
-        });
-    });
-
     //testimonial slide
     const testArr = [
         {
@@ -223,6 +180,51 @@ document.addEventListener("DOMContentLoaded", function () {
         updateTest(testIndex);
         updateScrollbar();
     });
+
+    // desinations section swiper
+    const swiper = new Swiper('.destinations-slide .swiper', {
+        speed: 900,
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 80,
+        allowTouchMove: true,
+        centeredSlides: true,
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+    });
+
+    // when mouse move on the swiper images
+    const swiperSlides = document.querySelectorAll('.destinations-slide .swiper-slide');
+
+    swiperSlides.forEach(slide => {
+        const layer = slide.querySelector('.gradient-overlay');
+        const slideImg = slide.querySelector('img');
+
+        layer.addEventListener('mousemove', (e) => {
+            const rect = layer.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const moveX = (centerX - mouseX) / 50;
+            const moveY = (centerY - mouseY) / 50;
+
+            slideImg.style.transform = `scale(1.1) translate(${moveX}px, ${moveY}px)`;
+        });
+
+        layer.addEventListener('mouseout', function () {
+            slideImg.style.transform = 'scale(1)';
+        });
+    });
+
+    
 
     // promise section
     window.addEventListener('scroll', function () {

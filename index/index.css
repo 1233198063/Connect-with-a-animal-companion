@@ -50,6 +50,9 @@
   position: relative;
   z-index: 1;
 }
+h4 {
+  margin: 26.04166667px 0px;
+}
 /* home hero */
 .home-hero {
   position: relative;
@@ -62,14 +65,6 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transition: opacity 0.3s linear;
-}
-.home-hero .overlay {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  background-color: rgba(15, 19, 38, 0.55);
 }
 .home-hero-container {
   position: relative;
@@ -107,6 +102,9 @@
   /* web-logo */
 }
 .home-hero-container .home-hero-content .home-hero-intro {
+  background-color: #4a896cea;
+  border-radius: 26.04166667px;
+  padding: 26.04166667px;
   position: relative;
   z-index: 20;
   display: grid;
@@ -132,11 +130,13 @@
   grid-template-rows: auto auto;
 }
 .home-hero-container .home-hero-content .home-hero-intro .home-hero-title h1 {
+  text-align: center;
   font-size: 68px;
   line-height: 5rem;
 }
 .home-hero-container .home-hero-content .home-hero-intro .home-hero-title p {
-  color: #fff;
+  text-align: center;
+  color: #f7f8fc;
 }
 .home-hero-container .home-hero-content .web-logo {
   position: relative;
@@ -152,7 +152,6 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  color: #081c3a;
 }
 /* home-hero-subtitle */
 .home-hero-subtitle {
@@ -218,11 +217,45 @@
 }
 .destinations-section .destinations-heading .prototypes-text {
   display: flex;
+  justify-content: center;
   gap: 26.04166667px;
   margin: 0px 93.75px;
 }
+.destinations-section .destinations-heading .prototypes-text .left,
+.destinations-section .destinations-heading .prototypes-text .right {
+  width: 35%;
+}
 .destinations-section .destinations-heading .prototypes-text p {
   margin: 26.04166667px 0px;
+}
+.destinations-section .destinations-heading .prototypes-text .colors {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10.41666667px;
+  row-gap: 10.41666667px;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color {
+  width: 78.125px;
+  height: 78.125px;
+  border-radius: 50%;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color1 {
+  background-color: #fff0cf;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color2 {
+  background-color: #ea9a2b;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color3 {
+  background-color: #ef6018;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color4 {
+  background-color: #fbdcda;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color5 {
+  background-color: #d8e1d0;
+}
+.destinations-section .destinations-heading .prototypes-text .colors .color6 {
+  background-color: #4a896c;
 }
 .destinations-section .prototypes-imgs {
   display: flex;
@@ -236,7 +269,7 @@
   border-radius: 5.20833333px;
 }
 .destinations-section .destinations-slide {
-  margin: 0px 0px 208.33333333px 0px;
+  margin: 312.5px 0px;
 }
 .destinations-section .destinations-slide .swiper {
   overflow: visible;
@@ -247,16 +280,17 @@
   width: 151.04166667px;
   height: 62.5px;
   left: 50%;
+  top: 120%;
   transform: translate(-50%);
   z-index: 1;
 }
 .destinations-section .destinations-slide .swiper .buttons .swiper-button-next,
 .destinations-section .destinations-slide .swiper .buttons .swiper-button-prev {
-  background-color: #ffffff;
+  background-color: #fbdcda;
   width: 62.5px;
   height: 62.5px;
   align-items: center;
-  border: solid 1px #efeff7;
+  border: solid 1px #ef6018;
   border-radius: 100%;
 }
 .destinations-section .destinations-slide .swiper .buttons .swiper-button-next:after {
@@ -282,18 +316,8 @@
 }
 .destinations-section .destinations-slide .swiper .swiper-slide img {
   position: relative;
-  border-radius: 2.60416667px;
+  width: 338.54166667px;
   transition: transform 0.3s ease;
-}
-.destinations-section .destinations-slide .swiper .swiper-slide .gradient-overlay {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: 0%;
-  background-image: linear-gradient(to top, rgba(15, 19, 38, 0.6) 10%, transparent 100%);
-  border-radius: 2.60416667px;
-  z-index: 1;
 }
 .destinations-section .destinations-slide .swiper .swiper-slide .titles {
   position: absolute;
@@ -322,7 +346,7 @@
 }
 .benefits-section {
   margin: 0px 0px 0px 78.125px;
-  background-color: #efeff7;
+  background-color: #d8e1d0;
 }
 .benefits-section .intro-wrapper {
   padding: 145.83333333px 78.125px;
@@ -352,7 +376,7 @@
   display: flex;
   flex-direction: column;
   padding: 0px 26.04166667px;
-  background-image: url('../images/POV.png');
+  background-image: url("../images/POV.png");
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -436,6 +460,8 @@
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   align-items: center;
+}
+.testimonial-section .slider-wrapper .testimonial-tracker ul li {
   color: #fff;
 }
 .testimonial-section .slider-wrapper .testimonial-slide {
@@ -448,7 +474,7 @@
   text-align: center;
 }
 .testimonial-section .slider-wrapper .testimonial-slide .body-display {
-  background-image: url('../images/wireframe1.png');
+  background-image: url("");
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -525,7 +551,7 @@
   color: #fff;
 }
 .vacations-section .popular-vacations {
-  background-color: #fff;
+  background-color: #d8e1d0;
   border-radius: 5.20833333px;
   padding: 41.66666667px;
 }
@@ -735,7 +761,7 @@
   z-index: 1;
 }
 .promise-section .background {
-  background-color: #fff;
+  background-color: #fff0cf;
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -895,7 +921,7 @@
   margin-bottom: 26.04166667px;
 }
 .about-section {
-  background-color: #f7f8fc;
+  background-color: #fff0cf;
   margin-left: 78.125px;
   padding: 130.20833333px 93.75px;
   overflow: hidden;
@@ -905,20 +931,12 @@
   margin-bottom: 78.125px;
 }
 .about-section .about-wrapper {
-  display: grid;
   column-gap: 78.125px;
   row-gap: 93.75px;
   margin-bottom: 78.125px;
   align-items: center;
 }
-.about-section .about-wrapper .test-imgs {
-  grid-area: 1 / 1 / 2 / 2;
-  background-color: rgba(15, 19, 38, 0.55);
-  color: #fff;
-  height: 416.66666667px;
-}
 .about-section .about-wrapper .test-paragraphs {
-  grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-rows: auto;
   row-gap: 15.625px;
@@ -927,9 +945,7 @@
   display: inline-block;
 }
 .about-section .about-wrapper .result-imgs {
-  background-color: rgba(15, 19, 38, 0.55);
-  height: 416.66666667px;
-  color: #fff;
+  margin: 26.04166667px 0px;
 }
 .about-section .about-img-wrapper {
   display: flex;
@@ -1175,7 +1191,7 @@
 .posts-section .journal-left-wrapper .large-journal-img-wrapper .large-journal-img {
   height: 100%;
   width: 100%;
-  background-color: #ccc;
+  background-color: #fbdcda;
   background-size: cover;
   background-position: 50% 50%;
   transition: transform 0.8s ease;
@@ -1192,51 +1208,46 @@
   background-color: #fff;
   border-radius: 15.625px;
   box-shadow: 0 3.125px 25px -2.08333333px rgba(53, 64, 117, 0.1);
-  margin: 0px 26.04166667px;
-  padding: 26.04166667px;
+  margin: 26.04166667px;
+  padding: 26.04166667px 78.125px;
   display: grid;
   grid-template-rows: auto;
   row-gap: 15.625px;
 }
-.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .journal-category-tag {
-  position: absolute;
-  top: -13.02083333px;
-  left: 15.625px;
-  height: 26.04166667px;
-  background-color: #f7f8fc;
-  border-radius: 5.20833333px;
-  padding: 0px 10.41666667px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content h2 {
+  text-align: center;
 }
-.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .journal-category-tag .subtitle {
-  font-size: 7.8125px;
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content h3 {
+  font-weight: 600;
 }
-.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button {
-  height: 15.625px;
-  width: 104.16666667px;
-  padding: 15.625px 10.41666667px;
-  border: 1.04166667px solid #ccc;
-  color: #081c3a;
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .well h3 {
+  color: #4a896c;
+  margin-bottom: 15.625px;
 }
-.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button .subtitle {
-  letter-spacing: 1.04166667px;
-  font-size: 9.375px;
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .well li strong {
+  color: #4a896c;
 }
-.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .button:hover {
-  background-color: #081c3a;
-  color: #fff;
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .improve h3 {
+  color: #ef6018;
+  margin-bottom: 15.625px;
+}
+.posts-section .journal-left-wrapper .journal-post-info .large-journal-content .improve li strong {
+  color: #ef6018;
 }
 .posts-section .journal-right-wrapper {
   height: 100%;
+  position: relative;
+  z-index: 10;
 }
 .posts-section .journal-right-wrapper .subtitle-intro-wrapper {
   display: flex;
   margin-bottom: 26.04166667px;
 }
-.posts-section .journal-right-wrapper .subtitle-intro-wrapper .subtitle {
-  margin-right: 15.625px;
+.posts-section .journal-right-wrapper .subtitle-intro-wrapper h2 {
+  padding: 26.04166667px;
+  background-color: #d8e1d0;
+  border-radius: 15.625px;
+  border: 1px solid #4a896c;
 }
 .posts-section .journal-right-wrapper .post-list {
   list-style: none;
@@ -1246,32 +1257,19 @@
   height: 100%;
 }
 .posts-section .journal-right-wrapper .post-list .post-item {
-  background-color: #fff;
+  background-color: #d8e1d0;
   border-radius: 5.20833333px;
   padding: 5.20833333px;
   transition: all 1s ease;
 }
 .posts-section .journal-right-wrapper .post-list .post-item a {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 15.625px;
   height: 100%;
   text-decoration: none;
   color: #081c3a;
-}
-.posts-section .journal-right-wrapper .post-list .post-item a .journal-list-image {
-  width: 145.83333333px;
-  height: 100%;
-  border-radius: 5.20833333px;
-  overflow: hidden;
-}
-.posts-section .journal-right-wrapper .post-list .post-item a .journal-list-image .post-img {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: 50% 50%;
-  transition: all 1s;
-  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .posts-section .journal-right-wrapper .post-list .post-item:hover {
   transform: scale(1.05);
